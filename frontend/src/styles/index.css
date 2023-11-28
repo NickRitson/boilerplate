@@ -1,0 +1,52 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  html {
+    --theme: 'light';
+  }
+
+  :root {
+    --primary-color: #131212;
+    --secondary-color: rgb(241, 241, 241);
+
+    --color-bg-color: hsla(341, 0%, 96%, 1);
+    --color-bg-text-color: hsla(341, 18%, 4%, 1);
+    --color-accent-primary: hsla(180, 88%, 66%, 1);
+    --color-accent-secondary: hsla(160, 88%, 65%, 1);
+  
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    /* color-scheme: light dark; */
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (preferred-color-scheme: dark) {
+    :root {
+      --color-dark-primary: 341, 18%, 4%;
+      --color-dark-secondary: 341, 0%, 96%;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --color-dark-primary: 341, 18%, 4%;
+      --color-dark-secondary: 341, 0%, 96%;
+  }
+
+  :root[data-theme='light'] {
+    --color-background-color: 341, 0%, 96%;
+    --color-text-color: 341, 18%, 4%;
+  }
+
+  :root[data-theme='neon'] {
+    --color-neon-primary: 310 90% 59%;
+    --color-neon-secondary: 310 90% 59%;
+  }
+}
