@@ -1,27 +1,6 @@
 
 import { useState, useEffect } from 'react';
 
-// const useDarkMode = (): [boolean, () => void] => {
-//   const [isDarkMode, setIsDarkMode] = useState(false);
-
-//   useEffect(() => {
-//     const body = document.body;
-//     if (isDarkMode) {
-//       body.classList.add('dark');
-//     } else {
-//       body.classList.remove('dark');
-//     }
-//   }, [isDarkMode]);
-
-//   const toggleDarkMode = () => {
-//     setIsDarkMode(!isDarkMode);
-//   };
-
-//   return [isDarkMode, toggleDarkMode];
-// };
-
-// export default useDarkMode;
-
 export interface useDarkModeOptions {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
@@ -29,9 +8,11 @@ export interface useDarkModeOptions {
   disableDarkMode: () => void;
 }
 
-function useDarkMode (defaultValue?: boolean): useDarkModeOptions {
-  const isDarkOS = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [isDarkMode, setIsDarkMode] = useState(defaultValue || isDarkOS);
+function useDarkMode (): useDarkModeOptions {
+  const currentTheme = localStorage.getItem('theme');
+  console.log('currentTheme', currentTheme);
+  if (!currentTheme) window.matchMedia('(prefers-color-scheme: dark)').matches ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
+  const [isDarkMode, setIsDarkMode] = useState(currentTheme === 'dark' ? true : false);
 
   useEffect(() => {
     if (isDarkMode) {
@@ -46,7 +27,7 @@ function useDarkMode (defaultValue?: boolean): useDarkModeOptions {
   }, [isDarkMode]);
 
   return {
-    isDarkMode,
+    isDarkMode: currentTheme === 'dark' ? true : false,
     toggleDarkMode: () => setIsDarkMode(!isDarkMode),
     enableDarkMode: () => setIsDarkMode(true),
     disableDarkMode: () => setIsDarkMode(false)

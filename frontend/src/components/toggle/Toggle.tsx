@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import useDarkMode from '../../hooks/useDarkMode';
 
@@ -7,20 +7,17 @@ export interface ToggleProps {
 }
 
 const Toggle: React.FC<ToggleProps> = ({ toggled }) => {
-    const [isOn, setIsOn] = useState(toggled || false);
-    const { toggleDarkMode } = useDarkMode();
+    const { isDarkMode, enableDarkMode, disableDarkMode } = useDarkMode();
+    const [isOn, setIsOn] = useState(toggled || isDarkMode);
 
-    useEffect(() => {
-        setIsOn(toggled || false);
-    }, [toggled]);
+    console.log('isOn', isOn, 'toggled', toggled, 'isDarkMode', isDarkMode);
 
     const handleToggle = () => {
+        console.log('handled', isOn, isDarkMode);
+        if (isOn) disableDarkMode();
+        if (!isOn) enableDarkMode();
         setIsOn(!isOn);
     };
-
-    useEffect(() => {
-        toggleDarkMode();
-    }, [isOn]);
 
     return (
         <label className="relative inline-flex items-center me-5 cursor-pointer">
