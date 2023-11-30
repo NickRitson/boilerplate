@@ -12,21 +12,20 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import HomePage from './views/HomePage';
 import GamePage from './views/GamesPage';
+import TechStackPage from './views/TechStackPage';
 import './styles/index.css'; 
 
 const AppLayout: React.FC = () => {
   return (
     <div className="flex flex-col h-screen justify-between">
       <Navbar />
-      <div className="container mx-auto">
+      <div className="container mx-auto py-6">
         <Outlet />
       </div>
       <Footer />
     </div>
   );
 }
-
-console.log(`https://api.rawg.io/api/developers?key=${process.env.REACT_APP_RAWG_API_KEY}`)
 
 const router = createBrowserRouter([
   {
@@ -37,19 +36,19 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "/techstack",
-        element: <div>Tech In Boilerplate</div>,
+        path: "/tech-stack",
+        element: <TechStackPage />,
       },
       {
         path: "/games",
         element: <GamePage />,
         loader: async () => {
-          return fetch(`https://api.rawg.io/api/developers?key=${process.env.REACT_APP_RAWG_API_KEY}`);
+          return fetch(`https://api.rawg.io/api/developers?key=619ef6468767436f828ec41fb7e9c17d`);
         },
       },
       {
         path: "/playground",
-        element: <div>Tech In Boilerplate</div>,
+        element: <div>Playground</div>,
       },
     ]
   },
@@ -65,5 +64,10 @@ createRoot(document.getElementById("root")!).render(
 
 /*
 cypress + Jest
-
+a/b testing
+storybook/mddox
+games need param on route to fetch single game data
+auth via supabase + cdn
+mock server + ds, tw services
+add react-motion
 */

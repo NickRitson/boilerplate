@@ -6,7 +6,7 @@ import Toggle from '../toggle/Toggle';
 
 const Navbar: React.FC = () => {
     return (
-            <nav className="bg-white border-gray-200 dark:bg-gray-900">
+            <nav id="navbar" className="bg-white border-gray-200 dark:bg-gray-900">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <span className="flex items-center space-x-3 rtl:space-x-reverse">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 mt-1">
