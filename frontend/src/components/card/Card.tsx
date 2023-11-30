@@ -1,5 +1,6 @@
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 import { addGame, removeGame } from '../../redux/reducers/gameHistoryReducer';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
     coverImage: string;
@@ -10,6 +11,7 @@ interface CardProps {
 
 interface gamesArray {
     name: string;
+    id: number;
 }
 
 const Card: React.FC<CardProps> = ({ coverImage, title, count, gamesCatalogue }) => {
@@ -50,7 +52,7 @@ const Card: React.FC<CardProps> = ({ coverImage, title, count, gamesCatalogue })
                     </div>
                     <div className="flex flex-wrap gap-x-1 gap-y-2">
                         {gamesCatalogue?.slice(0, 3).map((game) => (
-                            <span key={game.name} className="w-max bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{game.name}</span>
+                            <Link to={`/game/${game.id.toString()}`} key={game.name}><span className="w-max bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{game.name}</span></Link>
                         ))}
                     </div>
                 </div>

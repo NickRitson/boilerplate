@@ -1,7 +1,5 @@
 import React from 'react';
 
-console.log(import.meta.env.VITE_RAWG_API_KEY)
-
 const HomePage: React.FC = () => {
     return (
         <div className="bg container mx-auto">

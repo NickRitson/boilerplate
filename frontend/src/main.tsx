@@ -1,33 +1,18 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { Provider  } from 'react-redux';
+import { Provider } from 'react-redux';
 import {
   createBrowserRouter,
-  Outlet,
   RouterProvider,
 } from "react-router-dom";
 
 import { store } from './redux/store';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import AppLayout from './views/AppLayout';
 import HomePage from './views/HomePage';
-import GamePage from './views/GamesPage';
+import GamePage from './views/GamePage';
+import GamesPage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
 import './styles/index.css';
-
-const API_KEY = import.meta.env.VITE_RAWG_API_KEY;
-
-const AppLayout: React.FC = () => {
-  return (
-    <div className="flex flex-col h-screen justify-between">
-      <Navbar />
-      <div className="container mx-auto py-6">
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  );
-}
 
 const router = createBrowserRouter([
   {
@@ -43,9 +28,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/games",
-        element: <GamePage />,
+        element: <GamesPage />,
         loader: async () => {
-          return fetch(`https://api.rawg.io/api/developers?key=${API_KEY}`);
+          return fetch(`https://api.rawg.io/api/developers?key=${import.meta.env.VITE_RAWG_API_KEY}`);
+        },
+      },
+      {
+        path: "/game/:id",
+        element: <GamePage />,
+        loader: async ({ params }) => {
+          return await fetch(`https://api.rawg.io/api/games/${params.id}?key=${import.meta.env.VITE_RAWG_API_KEY}`);
         },
       },
       {
@@ -59,17 +51,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
-        <RouterProvider router={router} />
-      </Provider>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
 
-/*
-cypress + Jest
-a/b testing
-storybook/mddox
-games need param on route to fetch single game data
-auth via supabase + cdn
-mock server + ds, tw services
-add react-motion
-*/
+
