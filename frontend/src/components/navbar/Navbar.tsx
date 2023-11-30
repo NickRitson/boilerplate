@@ -6,7 +6,7 @@ import Toggle from '../toggle/Toggle';
 
 const Navbar: React.FC = () => {
     return (
-            <nav id="navbar" className="bg-white border-gray-200 dark:bg-gray-900">
+            <nav>
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <span className="flex items-center space-x-3 rtl:space-x-reverse">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 mt-1">
@@ -17,29 +17,29 @@ const Navbar: React.FC = () => {
                     </Link>
                 </span>
                 <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-language">
-                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0">
                         <li>
-                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Home
                             </Link>
                         </li>
                         <li>
-                            <Link to="/tech-stack" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            <Link to="/tech-stack" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Tech Stack
                             </Link>
                         </li>
                         <li>
-                            <Link to="/games" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            <Link to="/games" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Games
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
-                                Mock Data
+                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                Mock Data (server)
                             </Link>
                         </li>
                         <li>
-                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Contact
                             </Link>
                         </li>
