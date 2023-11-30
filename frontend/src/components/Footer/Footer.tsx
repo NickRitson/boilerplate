@@ -1,7 +1,6 @@
 const Footer: React.FC = () => {
     return (
-    
-        <footer className="bg-white dark:bg-gray-900">
+        <footer className="border-t border-slate-100 dark:border-slate-900">
             <div className="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" className="hover:underline">NickRitson</a>. All Rights Reserved.
