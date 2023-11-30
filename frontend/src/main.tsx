@@ -13,7 +13,9 @@ import Footer from './components/Footer/Footer';
 import HomePage from './views/HomePage';
 import GamePage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
-import './styles/index.css'; 
+import './styles/index.css';
+
+const API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 
 const AppLayout: React.FC = () => {
   return (
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
         path: "/games",
         element: <GamePage />,
         loader: async () => {
-          return fetch(`https://api.rawg.io/api/developers?key=619ef6468767436f828ec41fb7e9c17d`);
+          return fetch(`https://api.rawg.io/api/developers?key=${API_KEY}`);
         },
       },
       {
