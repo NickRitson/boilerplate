@@ -61,6 +61,8 @@ const TechStackPage: React.FC = () => {
                     <div>
                         <p className="font-bold">Site Status: <span><a href="https://freelance-3.betteruptime.com" target="_blank">check status</a></span></p>
                         <hr />
+                        <p>currently connected to <span className="text-green-300">vercel</span>, <span className="text-blue-300">checkly (testing & performance)</span>, <span className="text-yellow-300">uptime (live monitoring)</span>, <span className="text-red-300">embold (code quality)</span></p>
+                        <small>need to add to documentation (gitbook/storybook)</small>
                     </div>
                 </section>
             </div>

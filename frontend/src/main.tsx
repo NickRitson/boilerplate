@@ -12,6 +12,7 @@ import HomePage from './views/HomePage';
 import GamePage from './views/GamePage';
 import GamesPage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
+import Playground from './views/Playground';
 import './styles/index.css';
 
 const router = createBrowserRouter([
@@ -42,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/playground",
-        element: <div>Playground</div>,
+        element: <Playground />,
       },
     ]
   },
