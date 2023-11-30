@@ -7,11 +7,12 @@ interface gameProps {
     id: number;
     name: string;
     description: string;
-    background_image: string;
-    tags: tagsArray[];
+    image_background: string;
+    games_count: number,
+    games: gamesArray[];
 }
 
-interface tagsArray {
+interface gamesArray {
     name: string;
 }
 
@@ -20,11 +21,10 @@ const GamePage: React.FC = () => {
 
     return (
         <div>
-            <h1>Games</h1>
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 mt-8">
                     {data.results.map((game: gameProps) => (
-                        <Card key={game.id} coverImage={game.background_image} title={game.name} tags={game.tags} />
+                        <Card key={game.id} coverImage={game.image_background} count={game.games_count} title={game.name} gamesCatalogue={game.games} />
                     ))}
                 </div>
             </section>

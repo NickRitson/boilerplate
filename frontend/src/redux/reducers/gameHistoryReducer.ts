@@ -21,7 +21,6 @@ export const gameHistorySlice = createSlice({
     },
     removeGame: (state, action: PayloadAction<string>) => {
       const gameToRemove = action.payload;
-      console.log(state.games, gameToRemove);
       state.games = state.games.filter(game => game !== gameToRemove);
     },
     clearState: (state) => {

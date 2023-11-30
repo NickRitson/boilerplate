@@ -10,7 +10,6 @@ export interface useDarkModeOptions {
 
 function useDarkMode (): useDarkModeOptions {
   const currentTheme = localStorage.getItem('theme');
-  console.log('currentTheme', currentTheme);
   if (!currentTheme) window.matchMedia('(prefers-color-scheme: dark)').matches ? localStorage.setItem('theme', 'dark') : localStorage.setItem('theme', 'light');
   const [isDarkMode, setIsDarkMode] = useState(currentTheme === 'dark' ? true : false);
 
