@@ -1,7 +1,5 @@
-import React from 'react';
-
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
-import { addGame, removeGame, clearState } from '../../redux/reducers/gameHistoryReducer';
+import { addGame, removeGame } from '../../redux/reducers/gameHistoryReducer';
 
 interface CardProps {
     coverImage: string;
@@ -46,7 +44,6 @@ const Card: React.FC<CardProps> = ({ coverImage, title, count, gamesCatalogue })
                                         </svg>
                                     </button>
                                 }
-                                {/* <button onClick={() => dispatch(clearState())}>Clear</button> */}
                             </div>
                         </div>
                         <p>Games in catalogue: {count}</p>
