@@ -40,6 +40,16 @@ const Navbar: React.FC = () => {
                         </li>
                         <li>
                             <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                AI
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/playground" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                Playground
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/" className="block py-2 px-3 md:p-0 text-gray-900 rounded md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Contact
                             </Link>
                         </li>
