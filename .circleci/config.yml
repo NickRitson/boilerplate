@@ -18,7 +18,7 @@ jobs:
 
       - run:
           name: Build
-          command: yarn build
+          command: yarn dev
 
   test:
     docker:
