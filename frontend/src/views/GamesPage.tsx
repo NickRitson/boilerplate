@@ -23,10 +23,11 @@ const GamePage: React.FC = () => {
 
     return (
         <div className="container mx-auto">
-            <section>
-            <h1 className="text-6xl font-bold text-center py-6 bg-gradient-to-r from-lime-400 to-lime-600 bg-clip-text text-transparent">
+            <section className="text-center">
+                <h1 className="text-6xl font-bold pt-3 pb-1 bg-gradient-to-r from-lime-400 to-lime-600 bg-clip-text text-transparent">
                     Game Publishers
                 </h1>
+                <small className="font-bold text-slate-500">data source: <a href="https://rawg.io/" target="_blank">https://rawg.io/</a></small>
             </section>
             <section>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">

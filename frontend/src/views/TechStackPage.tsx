@@ -60,6 +60,7 @@ const TechStackPage: React.FC = () => {
                 <section className="my-12">
                     <div>
                         <p className="font-bold">Site Status: <span><a href="https://freelance-3.betteruptime.com" target="_blank">check status</a></span></p>
+                        <hr />
                     </div>
                 </section>
             </div>
