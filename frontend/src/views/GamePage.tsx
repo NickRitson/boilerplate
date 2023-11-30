@@ -13,7 +13,6 @@ import { useLoaderData } from "react-router-dom";
 const GamePage: React.FC = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const data = useLoaderData() as any;
-    console.log('PR:', data);
 
     return (
         <div className="container mx-auto">
