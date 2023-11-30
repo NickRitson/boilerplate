@@ -3,29 +3,15 @@ import { createRoot } from 'react-dom/client';
 import { Provider  } from 'react-redux';
 import {
   createBrowserRouter,
-  Outlet,
   RouterProvider,
 } from "react-router-dom";
 
 import { store } from './redux/store';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import AppLayout from './views/AppLayout';
 import HomePage from './views/HomePage';
 import GamePage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
-import './styles/index.css'; 
-
-const AppLayout: React.FC = () => {
-  return (
-    <div className="flex flex-col h-screen justify-between">
-      <Navbar />
-      <div className="container mx-auto py-6">
-        <Outlet />
-      </div>
-      <Footer />
-    </div>
-  );
-}
+import './styles/index.css';
 
 const router = createBrowserRouter([
   {
@@ -43,7 +29,7 @@ const router = createBrowserRouter([
         path: "/games",
         element: <GamePage />,
         loader: async () => {
-          return fetch(`https://api.rawg.io/api/developers?key=619ef6468767436f828ec41fb7e9c17d`);
+          return fetch(`https://api.rawg.io/api/developers?key=${import.meta.env.VITE_RAWG_API_KEY}`);
         },
       },
       {
@@ -61,13 +47,3 @@ createRoot(document.getElementById("root")!).render(
       </Provider>
   </React.StrictMode>
 );
-
-/*
-cypress + Jest
-a/b testing
-storybook/mddox
-games need param on route to fetch single game data
-auth via supabase + cdn
-mock server + ds, tw services
-add react-motion
-*/
