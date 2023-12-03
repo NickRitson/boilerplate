@@ -13,6 +13,7 @@ import GamePage from './views/GamePage';
 import GamesPage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
 import Playground from './views/Playground';
+import AdventOfCodePage from './views/AdventOfCodePage';
 import './styles/index.css';
 
 const router = createBrowserRouter([
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/playground",
         element: <Playground />,
+      },
+      {
+        path: "/advent-of-code",
+        element: <AdventOfCodePage />,
       },
     ]
   },
