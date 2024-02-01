@@ -1,4 +1,5 @@
-import { Outlet } from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import Navbar from '../components/navbar/Navbar';
 // import Footer from '../components/footer/Footer';
@@ -11,6 +12,7 @@ const AppLayout: React.FC = () => {
           <Outlet />
         </div>
         {/* <Footer /> */}
+        <SpeedInsights/>
       </div>
     );
   }
