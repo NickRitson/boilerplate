@@ -35,7 +35,7 @@ const GamePage: React.FC = () => {
             <section className="container mx-auto section-image-gaming h-[30rem]">
                 <div className="grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 lg:grid-cols-3">
                     {data.results.slice(0,6).map((game: gameProps) => (
-                        <Card key={game.id.toString()} coverImage={game.image_background} count={game.games_count} title={game.name} gamesCatalogue={game.games} />
+                        <Card key={game.id.toString()} coverImage={game.image_background} title={game.name} gamesCatalogue={game.games} />
                     ))}
                 </div>
             </section>
