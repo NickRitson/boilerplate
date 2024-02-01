@@ -13,6 +13,7 @@ import GamePage from './views/GamePage';
 import GamesPage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
 import Playground from './views/Playground';
+import SushiPage from './views/SushiPage';
 import './styles/index.css';
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/tech-stack",
         element: <TechStackPage />,
+      },
+      {
+        path: "/sushi",
+        element: <SushiPage />,
       },
       {
         path: "/games",
