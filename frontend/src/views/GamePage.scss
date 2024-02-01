@@ -1,0 +1,15 @@
+.game-card {
+    background: #6d28d9;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+
+    img {
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        object-fit: fill;
+    }
+}

@@ -1,13 +1,13 @@
 import { Outlet } from "react-router-dom";
 
-import Navbar from '../components/navbar/Navbar';
-import Footer from '../components/Footer/Footer';
+import Navbar from '../components/navbars/Navbar';
+import Footer from '../components/footer/Footer';
 
 const AppLayout: React.FC = () => {
     return (
-      <div className="flex flex-col h-screen justify-between">
+      <div className="flex flex-col justify-between h-screen">
         <Navbar />
-        <div className="py-6">
+        <div>
           <Outlet />
         </div>
         <Footer />
