@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <nav className="bg-white">
+        <nav>
             <div className="flex flex-wrap items-center justify-between p-4 mx-auto max-w-screen-2xl">
                 <span className="flex items-center space-x-3 rtl:space-x-reverse">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 mt-1">
