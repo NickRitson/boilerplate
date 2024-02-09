@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from 'react-router-dom';
 
 import { store } from './redux/store';
 import AppLayout from './views/AppLayout';
@@ -14,7 +14,9 @@ import GamesPage from './views/GamesPage';
 import TechStackPage from './views/TechStackPage';
 import Playground from './views/Playground';
 import SushiPage from './views/SushiPage';
+import ComponentsPage from './views/ComponentsPage';
 import './styles/index.css';
+import TableGrid from './components/table-grid/TableGrid';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/tech-stack",
         element: <TechStackPage />,
+      },
+      {
+        path: "/components",
+        element: <ComponentsPage />,
+      },
+      {
+        path: "/components/:file",
+        element: <TableGrid />,
       },
       {
         path: "/sushi",
@@ -50,6 +60,7 @@ const router = createBrowserRouter([
         path: "/playground",
         element: <Playground />,
       },
+      // TODO: 404 page https://vercel.com/docs/projects/project-configuration#project/rewrites
     ]
   },
 ]);
