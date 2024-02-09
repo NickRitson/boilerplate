@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from 'react-router-dom';
 
 import Toggle from '../toggle/Toggle';
 
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
                                                     <Link to="/crypto" className="block px-3 py-4 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                                         <span className="flex gap-2 px-2 py-4">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-gem"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
-                                                            Crypto
+                                                            Crypto <small className="text-gray-600">(cs*)</small>
                                                         </span>
                                                     </Link>
                                                 </li>
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                                                     <Link to="/blog" className="block px-3 py-4 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                                         <span className="flex gap-2 px-2 py-4">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-newspaper"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
-                                                            Blog
+                                                            Blog <small className="text-gray-600">(cs*)</small>
                                                         </span>
                                                     </Link>
                                                 </li>
@@ -89,23 +89,18 @@ const Navbar: React.FC = () => {
                             }
                         </li>
                         <li>
+                            <Link to="/components" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                Components
+                            </Link>
+                        </li>
+                        <li>
                             <Link to="/tech-stack" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
                                 Tech Stack
                             </Link>
                         </li>
                         <li>
-                            <Link to="/games" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                Games
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="/" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                Mock Data (server)
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                AI
+                                AI <small className="text-gray-600">(cs*)</small>
                             </Link>
                         </li>
                         <li>
@@ -115,7 +110,12 @@ const Navbar: React.FC = () => {
                         </li>
                         <li>
                             <Link to="/" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                Documentation
+                                Documentation <small className="text-gray-600">(cs*)</small>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                Snippets <small className="text-gray-600">(cs*)</small>
                             </Link>
                         </li>
                     </ul>

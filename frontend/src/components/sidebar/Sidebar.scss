@@ -1,0 +1,36 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    padding: 1rem;
+    left: -100px;
+    height: 100vh;
+    background-color: aqua;
+
+    &-close {
+        left: -100px;
+        animation: slideIn 0.5s ease-in-out;
+    }
+
+    &-open {
+        left: 0px;
+        animation: slideOut 0.5s ease-in-out;
+    }
+
+    @keyframes slideIn {
+        0% {
+            left: 0px;
+        }
+        100% {
+            left: -100px;
+        }
+    }
+
+    @keyframes slideOut {
+        0% {
+            left: -100px;
+        }
+        100% {
+            left: 0px;
+        }
+    }
+}

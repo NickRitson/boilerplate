@@ -1,6 +1,6 @@
 import { Suspense, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Preload, useGLTF, useAnimations, PresentationControls } from "@react-three/drei";
+import { Preload, useGLTF, useAnimations, PresentationControls } from '@react-three/drei';
 
 import Loader from './Loader';
 
