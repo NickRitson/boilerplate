@@ -104,8 +104,8 @@ const Navbar: React.FC = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/playground" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                Playground
+                            <Link to="/code-challenges" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
+                                Code Challenges
                             </Link>
                         </li>
                         <li>

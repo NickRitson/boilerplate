@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/playground",
+        path: "/code-challenges",
         element: <Playground />,
       },
       // TODO: 404 page https://vercel.com/docs/projects/project-configuration#project/rewrites
