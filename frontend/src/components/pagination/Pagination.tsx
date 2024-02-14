@@ -25,8 +25,8 @@ const Pagination: React.FC<PaginationProps> = ({ currentPage, totalPages, visibl
                     {pageNumber < totalPages &&
                         <button
                             key={pageNumber}
-                            className="flex items-center justify-center w-10 h-10 border rounded-md cursor-pointer border-slate-500"
-                            style={{ backgroundColor: currentPage === pageNumber ? 'lightblue' : 'white' }}
+                            className="flex items-center justify-center w-10 h-10 border rounded-md cursor-pointer border-slate-500 dark:bg-slate-800"
+                            style={{ backgroundColor: currentPage === pageNumber ? 'lightblue' : '' }}
                             onClick={() => updatePage(pageNumber)}
                         >
                             {pageNumber + 1}
