@@ -113,11 +113,6 @@ const Navbar: React.FC = () => {
                                 Documentation <small className="text-gray-600">(cs*)</small>
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/" className="block px-3 py-2 text-gray-900 rounded md:p-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:text-white">
-                                Snippets <small className="text-gray-600">(cs*)</small>
-                            </Link>
-                        </li>
                     </ul>
                 </div>
                 <div className="flex items-center md:order-2">
