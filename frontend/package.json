@@ -16,7 +16,7 @@
     "@reduxjs/toolkit": "^1.9.7",
     "@vercel/analytics": "^1.1.1",
     "framer-motion": "^11.0.3",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "lucide-react": "^0.323.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
